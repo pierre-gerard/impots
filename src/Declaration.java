@@ -4,7 +4,7 @@ public class Declaration {
 
 	protected static final boolean trace = false;
 
-	protected static final int[] seuils = { 0, 10000, 25000, 75000, 100000 };
+	protected static final int[] seuils = { 0, 10000, 25000, 75000, 150000 };
 	protected static final int[] taux = { 0, 10, 30, 40, 45 };
 
 	int revenus;
@@ -16,7 +16,7 @@ public class Declaration {
 		if (revenus < 0)
 			throw new ErreurRevenusException();
 		if (demiParts < 1)
-			throw new ErreurRevenusException();
+			throw new ErreurPartsException();
 
 		this.revenus = revenus;
 		this.demiParts = demiParts;
